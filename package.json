@@ -1,0 +1,48 @@
+{
+  "name": "arc",
+  "version": "1.0.0",
+  "description": "A lightweight, read-only MCP server that exposes Arc blockchain documentation as searchable tools for MCP-compatible clients like Claude Code, Cursor, VS Code, Gemini CLI, and Codex.",
+  "author": "namedfarouk",
+  "license": "MIT",
+  "type": "module",
+  "main": "dist/cli.js",
+  "bin": {
+    "arc-docs-mcp": "dist/cli.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/cli.js",
+    "start:sse": "node dist/sse.js",
+    "check": "node dist/check.js",
+    "dev": "tsc --watch",
+    "cf:dev": "wrangler dev",
+    "cf:deploy": "wrangler deploy"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.29.0",
+    "express": "^4.21.2",
+    "zod": "^4.3.6"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.2",
+    "@types/node": "^22.15.3",
+    "typescript": "^5.8.3",
+    "wrangler": "^4.14.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/namedfarouk/arc-docs-mcp"
+  },
+  "keywords": [
+    "arc",
+    "circle",
+    "blockchain",
+    "mcp",
+    "documentation",
+    "ai",
+    "llm"
+  ]
+}
